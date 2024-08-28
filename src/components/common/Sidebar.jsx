@@ -26,8 +26,8 @@ const Sidebar = () => {
         >
             <div className='h-full bg-gray-800 bg-opacity-50 backdrop-blur-md p-4 flex flex-col border-r border-gray-700'>
                 <motion.button
-                    whileHover={{scale:1.1}}
-                    whileTap={{scale:0.9}}
+                    whileHover={{scale:1.2}}
+                    whileTap={{scale:1.1}}
                     className="rounded-full p-2 hover:bg-gray-700 transition-colors max-w-fit"
                     onClick={()=>setIssidebarOpen((prev)=>!prev)}
                 >
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 <nav className="flex-grow mt-4">
                     {SIDEBAR_ITEMS.map((item)=>(
                         <Link key={item.href} to={item.href}>
-                            <motion.div className="flex items-center p-4 text-sm font-medium hover:bg-gray-700 mb-2 rounded-lg">
+                            <div className="flex items-center p-4 text-sm font-medium hover:bg-gray-700 mb-2 rounded-lg">
                                 <item.icon size={20} style={{color:item.color,maxWidth:"20px"}}/>
                                 <AnimatePresence>
                                     {isSidebarOpen && (
@@ -52,7 +52,7 @@ const Sidebar = () => {
                                         </motion.span>
                                     )}
                                 </AnimatePresence>
-                            </motion.div>
+                            </div>
                         </Link>
                     ))}
                 </nav>
