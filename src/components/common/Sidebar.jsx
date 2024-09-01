@@ -19,6 +19,7 @@ const SIDEBAR_ITEMS = [
 ];
 const Sidebar = () => {
     const [isSidebarOpen,setIssidebarOpen]=useState(true)
+
     return (
         <motion.div className={`relative z-10 transition-all duration-300 ease-in-out flex-shrink-0 
         ${isSidebarOpen?"w-72":"w-20"}`}
@@ -46,7 +47,7 @@ const Sidebar = () => {
                                             initial={{opacity:0,width:0}}
                                             animate={{opacity:1,width:"auto"}}
                                             exit={{opacity:0,width:0}}
-                                            transition={{duration:0.2,delay:0.3}}
+                                            transition={{duration:0.1,delay:0.2}}
                                         >
                                             {item.name}
                                         </motion.span>
